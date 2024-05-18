@@ -20,7 +20,7 @@ function Clock() {
           // Update currentTime with the current time formatted as per requirements
           new Date().toLocaleString("en-US", {
             hour: "numeric",
-            minute: "numeric",
+            minute: "numeric", 
             second: "numeric",
             hour12: true,
           })
