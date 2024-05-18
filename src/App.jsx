@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState} from "react";
+import Clock from "./Clock";
 
 import "./App.css";
 
@@ -22,14 +23,8 @@ function App() {
     setCounter(counter)
   }
 
+ 
 
-  const currentTime = new Date().toLocaleString('en-US', {
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-    hour12: true
-  });
-  
 
   const randomNumber = Math.floor(Math.random() * counter) + 0;
 
@@ -37,7 +32,7 @@ function App() {
   return (
     <>
     
-    <h4>Current Time : {currentTime}</h4>
+<Clock/>
 
       <h1> The counter value is {counter}</h1>
       <button onClick={addValue}>Add value</button>
