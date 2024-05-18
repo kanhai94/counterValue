@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.container {
+  position: relative;
+}
+
+.time {
+  position: fixed;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}

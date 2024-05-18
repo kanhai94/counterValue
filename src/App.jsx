@@ -23,11 +23,23 @@ function App() {
   }
 
 
+  const currentTime = new Date().toLocaleString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: true
+  });
+  
+
   const randomNumber = Math.floor(Math.random() * counter) + 0;
+
 
   return (
     <>
-      <h1>The counter value is {counter}</h1>
+    
+    <h4>Current Time : {currentTime}</h4>
+
+      <h1> The counter value is {counter}</h1>
       <button onClick={addValue}>Add value</button>
       <br />
       <br />
