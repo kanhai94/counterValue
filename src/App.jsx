@@ -7,11 +7,18 @@ function App() {
 
   let addValue = () => {
     counter = counter + 1;
+    if(counter>100){
+      counter=0
+    }
     // console.log("value", Math.random());
     setCounter(counter);
   };
   let subValue=()=>{
     counter=counter-1
+    if(counter<0){
+      counter=0
+    }
+
     setCounter(counter)
   }
 
