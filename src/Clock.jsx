@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 function Clock() {
     // Component state to hold the current time
     const [currentTime, setCurrentTime] = useState(
@@ -34,4 +36,6 @@ function Clock() {
       <h4>Current Time : {currentTime}</h4>
     );
   } 
-  
+
+
+  export default Clock;
