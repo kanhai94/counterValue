@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import Clock from "./Clock";
 
 import "./App.css";
@@ -8,44 +8,49 @@ function App() {
   const [showError, setShowError] = useState(false);
   const [errorMessage, setErrorMessage] = useState(""); // State to hold error message
 
-
   let addValue = () => {
+    // counter = counter + 1;
+    // counter = counter + 1;
+    // counter = counter + 1;
+    // counter = counter + 1;
+
+    // // setCounter(preCouter=>preCouter+1)
+    // // setCounter(preCouter=>preCouter+1)
+    // // setCounter(preCouter=>preCouter+1)
+    // // setCounter(preCouter=>preCouter+1)
+    // // setCounter(preCouter=>preCouter+1)
     counter = counter + 1;
-    if(counter>5){
-      counter=0
-      setShowError(true);
-      setErrorMessage('Error: You exceed the limit');
-    
-    }
-    else{
+
+    if (counter < 50) {
       setShowError(false);
+    } else {
+      counter = 0;
+      setShowError(true);
+      setErrorMessage("Error: You exceed the limit");
     }
     setCounter(counter);
 
+    //  setCounter(counter+1);
+    //  setCounter(counter+1);
+    //  setCounter(counter+1);
+    //  setCounter(counter+1);
   };
-  let subValue=()=>{
-    counter=counter-1
-    if(counter<0){
-      counter=0
+  let subValue = () => {
+    counter = counter - 1;
+    if (counter < 0) {
+      counter = 0;
       setShowError(true); // Show error message when counter goes below 0
-      setErrorMessage('Error: Counter cannot be negative!');
-
-
+      setErrorMessage("Error: Counter cannot be negative!");
     }
 
-    setCounter(counter)
-  }
-
- 
-
+    setCounter(counter);
+  };
 
   const randomNumber = Math.floor(Math.random() * counter) + 0;
 
-
   return (
     <>
-    
-<Clock/>
+      <Clock />
 
       <h1> The counter value is {counter}</h1>
 
@@ -60,9 +65,11 @@ function App() {
       <br />
       <button onClick={subValue}>Subtract Value</button>
 
-  
-
-      <h2><footer>The Random value between 0 to {counter} is {randomNumber}</footer></h2>
+      <h2>
+        <footer>
+          The Random value between 0 to {counter} is {randomNumber}
+        </footer>
+      </h2>
     </>
   );
 }
